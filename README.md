@@ -2,6 +2,8 @@
 
 Trabajo final de la materia **Ciencia de Datos para Economía y Negocios**, Maestría en Economía Aplicada — Universidad de Buenos Aires, Facultad de Ciencias Económicas.
 
+> **Summary (EN).** Course project (M.Sc. in Applied Economics, University of Buenos Aires) studying how the identity of the colonizing empire and the length of colonial rule relate to the time until democratization and to the survival of democratic regimes. It combines V-Dem, ERT, COLDAT and QoG data and applies Kaplan-Meier / Cox / Andersen-Gill survival models, discrete-time logit, fractional logit with Elastic Net, and ML classifiers (Python: `lifelines`, `scikit-learn`, `statsmodels`). The analysis is associational, not causal. Full write-up in Spanish: [`Informe_Final_Ciencia_de_Datos.pdf`](Informe_Final_Ciencia_de_Datos.pdf).
+
 ## Pregunta de investigación
 
 ¿En qué medida la identidad del imperio colonizador y la duración del dominio colonial influyen sobre el tiempo hasta la democratización y sobre la supervivencia posterior de los regímenes democráticos?
@@ -45,11 +47,26 @@ Cobertura temporal: 1900–2025. Los colonizadores se agrupan en cuatro categor�
 | Archivo | Descripción |
 |---|---|
 | `Informe_Final_Ciencia_de_Datos.pdf` | Informe final con metodología completa, resultados y bibliografía. |
-| `Herencia_Colonial_Supervivencia_Democratica.ipynb` | Notebook con el procesamiento de datos, modelos y visualizaciones. |
+| `Herencia_Colonial_Supervivencia_Democrática.ipynb` | Notebook con el procesamiento de datos, modelos y visualizaciones. |
 
 ## Herramientas
 
 Python — `pandas`, `lifelines` (Kaplan-Meier, Cox, Andersen-Gill), `scikit-learn` (K-Means, PCA, Elastic Net, Random Forest, SVM), `statsmodels` (Logit Fraccional).
+
+## Cómo reproducir
+
+1. El notebook está pensado para **Google Colab**: monta Google Drive y lee las bases desde `/content/drive/MyDrive/Ciencia de datos - Bases/Bases/`.
+2. Descargar las bases públicas de sus proveedores y guardarlas en esa carpeta con estos nombres (o ajustar las rutas `ruta_vdem`, `ruta_qog`, `ruta_coldat` en el notebook):
+   - `V-Dem-CY-Full+Others-v16.csv` (V-Dem)
+   - `qog_std_ts_jan26.csv` (Quality of Government)
+   - `COLDAT_dyads.csv` (COLDAT)
+3. Para correrlo fuera de Colab: `pip install -r requirements.txt`, abrir el notebook con Jupyter y reemplazar el montaje de Drive por rutas locales.
+
+Las bases no se incluyen en el repositorio; rigen los términos de uso de cada proveedor.
+
+## Licencia
+
+Código: [MIT](LICENSE). El texto y las figuras del informe son de los autores, todos los derechos reservados.
 
 ## Autores
 

@@ -1,0 +1,13 @@
+numpy
+pandas
+scipy
+statsmodels
+scikit-learn
+lifelines
+matplotlib
+seaborn
+plotly
+kaleido==0.2.1
+country_converter
+dataframe_image
+pyreadr
